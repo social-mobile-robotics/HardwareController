@@ -205,7 +205,7 @@ int main(void) {
             sprintf(num, "%4.2f", read_adc()*0.0048828);    // check accum
             uart_send_string(num);
         }
-        if (Data_rx == '1' || Data_rx == '2' || Data_rx == '3') { // set speed 100%, 66%, 33%
+        if (Data_rx == '1' || Data_rx == '2' || Data_rx == '3') { // set speed 33%, 66%, 100%
 
             if (Data_rx == '1') {
                 Data_rx = 0;

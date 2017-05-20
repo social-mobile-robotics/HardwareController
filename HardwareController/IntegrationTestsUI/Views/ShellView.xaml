@@ -1,0 +1,57 @@
+﻿<Window x:Class="IntegrationTestsUI.Views.ShellView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow"
+        Width="525"
+        Height="350">
+    <Grid>
+        <Grid.Resources>
+            <Thickness x:Key="SingleControlMargin">8,8,8,8</Thickness>
+        </Grid.Resources>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Pad -->
+        <Grid
+            Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Slider
+                Grid.Row="0"
+                Orientation="Vertical"
+                Margin="{StaticResource SingleControlMargin}"
+                HorizontalAlignment="Center"		
+                Minimum="0"
+                Maximum="100"
+                Value="0"
+                IsSnapToTickEnabled="True"
+                AutoToolTipPlacement="TopLeft">
+                <Slider.Ticks>
+                    <DoubleCollection>0.0,33.0,67.0,100.0</DoubleCollection>
+                </Slider.Ticks>
+            </Slider>
+
+            <Slider
+                Grid.Row="1"
+                Orientation="Horizontal"
+                Margin="{StaticResource SingleControlMargin}"
+                VerticalAlignment="Top"		
+                Minimum="-100"
+                Maximum="100"
+                Value="0"
+                IsSnapToTickEnabled="True"
+                AutoToolTipPlacement="TopLeft">
+                <Slider.Ticks>
+                    <DoubleCollection>-100.0,0.0,100.0</DoubleCollection>
+                </Slider.Ticks>
+            </Slider>
+
+        </Grid>
+    </Grid>
+</Window>
